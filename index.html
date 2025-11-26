@@ -7,6 +7,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
 
 	<style>
+		.scale {
+			transform: scale(0.7);
+			transform-origin: top left;
+			width: 142%; /* counteracts shrink so layout doesn't collapse */
+		}
+
 		body {
 			font-family: "Inter", sans-serif;
 			background: #f3efdf;
@@ -67,12 +73,14 @@
 	</style>
 </head>
 <body>
-	<h1 id="title">Shell Eco-Marathon Countdown</h1>
+	<div class="scale">
+		<h1 id="title">Shell Eco-Marathon Countdown</h1>
 
-	<div class="box">
-		<h2 id="subtitle">Competition starts in:</h2>
-		<div id="countdown">Loading…</div>
-		<div id="bottom-msg"></div>
+		<div class="box">
+			<h2 id="subtitle">Competition starts in:</h2>
+			<div id="countdown">Loading…</div>
+			<div id="bottom-msg"></div>
+		</div>
 	</div>
 
 	<script>
@@ -108,3 +116,4 @@
 	</script>
 </body>
 </html>
+
